@@ -3,14 +3,22 @@
 import Aura from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
-  modules: [
-    '@primevue/nuxt-module'
-  ],
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
+
+  modules: ['@primevue/nuxt-module', '@nuxt/ui'],
+
   primevue: {
     options: {
       theme: {
         preset: Aura
       }
     }
-  }
+  },
+
+  compatibilityDate: '2024-12-12'
 })

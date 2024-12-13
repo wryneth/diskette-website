@@ -11,37 +11,42 @@ import { ref } from "vue";
 const items = ref([
   {
     label: 'Home',
-    url: '/',
+    url: '#',
 
   },
   {
-    label: 'About',
-    url: '/about',
-  },
-  {
     label: 'Recent Videos',
-    url: '/videos',
+    url: '#videos',
   },
   {
-    label: 'Projects',
-    items: [
-      {
-        label: 'Diskette Case',
-        url: 'https://www.printables.com/model/1073452-diskette-case-modular-open-source-nas-chassis',
-      },
-      {
-        label: 'iPod Frame',
-        url: 'https://www.printables.com/model/981437-ipod-shuffle-4th-gen-dismantled-art',
-      },
-    ]
+    label: 'About',
+    url: '#about',
   },
   {
     label: 'Collection',
-    url: '/problem',
+    url: '#problem',
+  },
+  {
+    label: 'Projects',
+    url: '#projects',
+
   },
   {
     label: 'Contact',
-    url: '/contact',
+    items: [
+      {
+        label: 'E-Mail',
+        url: 'mailto:diskette@diskettekitchen.com',
+      },
+      {
+        label: 'Instagram DM',
+        url: 'https://ig.me/m/diskettekitchen',
+      },
+      {
+        label: 'Bluesky DM',
+        url: 'https://bsky.app/profile/diskettekitchen.com',
+      },
+    ]
   },
   {
     label: 'Diskette Data',

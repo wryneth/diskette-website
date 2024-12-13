@@ -7,7 +7,7 @@
     <img class="logo" src="/images/dk-wide.svg" alt="Diskette Kitchen Logo">
   </div>
   <div class="watch-btn">
-    <a href="https://youtube.com/@diskettekitchen/"> <Button href="https://vuejs.org/" label="Watch Now" /></a>
+    <a href="https://youtube.com/@diskettekitchen/"><button class="bn29">Watch Now</button></a>
   </div>
   <div class="wrapper">
     <div class="gradient gradient-1"></div>
@@ -30,7 +30,70 @@ body {
   position: relative;
   padding-bottom: 250px;
   z-index: 1;
+
 }
+
+.bn29 {
+  font-size: 35px;
+  width: 350px;
+  height: 110px;
+  border: none;
+  outline: none;
+  color: white;
+  font-style: 1.2em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.bn29:before,
+.bn29:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 105%;
+  height: 105%;
+  content: "";
+  z-index: -2;
+  background-size: 400% 400%;
+  background: linear-gradient(
+      60deg,
+      #f79533,
+      #f37055,
+      #ef4e7b,
+      #a166ab,
+      #5073b8,
+      #1098ad,
+      #07b39b,
+      #6fba82
+  );
+}
+
+.bn29:before {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-animation: pulse 10s infinite ease;
+  animation: pulse 10s infinite ease;
+}
+
+.bn29:after {
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+}
+
+.bn29:hover:before {
+  width: 115%;
+  height: 115%;
+}
+
+
 .logo{
   width: 80vw;
   z-index: 2;
