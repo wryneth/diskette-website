@@ -2,7 +2,6 @@
   <div>
     <Nav />
     <Welcome />
-    <NewVidBanner />
     <NuxtRouteAnnouncer />
     <NuxtWelcome />
     <NewVideo />

@@ -1,86 +1,164 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <div class="welcome">
-    <img class="logo" src="/images/dk-wide.png" alt="Diskette Kitchen Logo">
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
+  <div>
+    <img class="logo" src="/images/dk-wide.svg" alt="Diskette Kitchen Logo">
+  </div>
+  <div class="watch-btn">
+    <a href="https://youtube.com/@diskettekitchen/"> <Button href="https://vuejs.org/" label="Watch Now" /></a>
+  </div>
+  <div class="wrapper">
+    <div class="gradient gradient-1"></div>
+    <div class="gradient gradient-2"></div>
+    <div class="gradient gradient-3"></div>
+
   </div>
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
-
-.welcome {
-  height: 95vh;
-}
-.logo {
-  position: relative;
-  width: 75vw;
-  margin: 0 auto;
-  display: flex;
-}
-html {
-  height:100%;
-}
-
 body {
-  margin:0;
+  margin: 0;
+  color: #fff;
+  background-color: #000;
+  padding: 0;
 }
 .watch-btn {
-  position:relative;
-  font-size: 20px;
-  height: 70px;
-  width: 10vw;
-  font-family: 'Young Serif', sans-serif;
-  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 250px;
+  z-index: 1;
 }
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #282D27 50%, #16274A 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
-  height: 100vh;
+.logo{
+  width: 80vw;
+  z-index: 2;
+  margin: auto;
+  padding-top: 350px;
+  position: relative;
+  fill: blue;
+
+}
+.wrapper {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  filter: blur(150px);
 }
 
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
+.gradient {
+  z-index: 0;
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.6;
+  mix-blend-mode: screen;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.1, 0, 0.9, 1);
 }
 
-.bg3 {
-  animation-duration:5s;
+
+.gradient-1 {
+  background: rgb(255, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  width: 700px;
+  height: 700px;
+  animation-duration: 11s;
+  opacity: 0.6;
+  left: 60%;
+  top: 40%;
+  z-index: -2;
+  animation-name: animation-gradient-1;
+}
+.gradient-2 {
+  background: rgb(0, 255, 0) none repeat scroll 0% 0% / auto padding-box border-box;
+  width: 600px;
+  height: 600px;
+  animation-duration: 11s;
+  opacity: 0.6;
+  left: 40%;
+  top: 60%;
+  z-index: -1;
+  animation-name: animation-gradient-2;
+}
+.gradient-3 {
+  background: rgb(0, 0, 255) none repeat scroll 0% 0% / auto padding-box border-box;
+  width: 500px;
+  height: 500px;
+  animation-duration: 11s;
+  opacity: 0.6;
+  left: 50%;
+  top: 50%;
+  z-index: -3;
+  animation-name: animation-gradient-3;
 }
 
-.content {
-  background-color:rgba(255,255,255,.8);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
-  left:50%;
-  padding:10vmin;
-  position:fixed;
-  text-align:center;
-  top:50%;
-  transform:translate(-50%, -50%);
-}
-
-h1 {
-  font-family:monospace;
-}
-
-@keyframes slide {
+@keyframes animation-gradient-1 {
   0% {
-    transform:translateX(-25%);
+    transform: translateY(-50%) translateX(-50%) rotate(-20deg) translateX(20%);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg)
+    rotate(80deg) translateX(30%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) rotate(180deg) translateX(25%);
+  }
+  75% {
+    transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg)
+    rotate(240deg) translateX(15%);
   }
   100% {
-    transform:translateX(25%);
+    transform: translateY(-50%) translateX(-50%) rotate(340deg) translateX(20%);
   }
 }
+
+@keyframes animation-gradient-2 {
+  0% {
+    transform: translateY(-50%) translateX(-50%) rotate(40deg) translateX(-20%);
+  }
+  25% {
+    transform: translateY(-50%) translateX(-50%) skew(15deg, 15deg)
+    rotate(110deg) translateX(-5%);
+  }
+  50% {
+    transform: translateY(-50%) translateX(-50%) rotate(210deg) translateX(-35%);
+  }
+  75% {
+    transform: translateY(-50%) translateX(-50%) skew(-15deg, -15deg)
+    rotate(300deg) translateX(-10%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-50%) rotate(400deg) translateX(-20%);
+  }
+}
+
+@keyframes animation-gradient-3 {
+  0% {
+    transform: translateY(-50%) translateX(-50%) translateX(-15%)
+    translateY(10%);
+  }
+  20% {
+    transform: translateY(-50%) translateX(-50%) translateX(20%)
+    translateY(-30%);
+  }
+  40% {
+    transform: translateY(-50%) translateX(-50%) translateX(-25%)
+    translateY(-15%);
+  }
+  60% {
+    transform: translateY(-50%) translateX(-50%) translateX(30%) translateY(20%);
+  }
+  80% {
+    transform: translateY(-50%) translateX(-50%) translateX(5%) translateY(35%);
+  }
+  100% {
+    transform: translateY(-50%) translateX(-50%) translateX(-15%)
+    translateY(10%);
+  }
+}
+
 </style>
-<script setup lang="ts">
-</script>
