@@ -6,7 +6,7 @@
     </template>
     <div class="container">
       <img class="wren" src="/images/studio.png" alt="Wren">
-      <H1 class="text">Add rest of bio later</H1>
+      <H1 class="text">Finnish Bio Later</H1>
     </div>
 
     <template #footer>
@@ -28,14 +28,15 @@
 }
 .wren {
   display: inline-block;
-  width:750px;
+  width:700px;
   border-radius: 50px ;
+  margin: auto
 }
 .text {
   margin-top: 50px;
   margin-left: 50px;
   display: inline-block;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Young Serif', serif;
 }
 </style>

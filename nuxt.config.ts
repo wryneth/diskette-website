@@ -3,6 +3,10 @@
 import Aura from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
+  ui: {
+    primary: 'blue',
+    gray: 'cool'
+  },
   app: {
     head: {
       charset: 'utf-8',
@@ -10,7 +14,12 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@primevue/nuxt-module', '@nuxt/ui'],
+  modules: [
+    '@primevue/nuxt-module',
+    '@nuxt/ui',
+    '@nuxt/icon',
+    '@nuxtjs/color-mode'
+  ],
 
   primevue: {
     options: {

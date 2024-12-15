@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <UCard id="projects">
+  <UCard class="card-contain" id="projects">
     <template #header>
       <h1 class="title">Diskette://Projects</h1>
     </template>
@@ -70,6 +70,7 @@
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,441&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
+
 .title {
   text-align: center;
   font-family: 'Imbue', serif;
@@ -79,5 +80,12 @@
    display: inline-block;
    margin: 15px;
   font-family: 'Ubuntu', sans-serif;
+  justify-content: center;
+  align-items: center;
  }
+.card-contain {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
 </style>

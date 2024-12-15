@@ -18,6 +18,8 @@
 </template>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,441&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
+
 body {
   margin: 0;
   color: #fff;
@@ -46,6 +48,7 @@ body {
   cursor: pointer;
   background: none;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  font-family: 'Young Serif', serif;
 }
 
 .bn29:before,

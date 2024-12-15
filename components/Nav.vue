@@ -9,6 +9,7 @@
 import { ref } from "vue";
 
 const items = ref([
+
   {
     label: 'Home',
     url: '#',
@@ -77,3 +78,12 @@ const items = ref([
 
 }
 </style>
+
+
+<UButton
+    icon="grommet-icons:youtube"
+    size="sm"
+    color="red"
+    square
+    variant="solid"
+/>

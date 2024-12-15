@@ -2,52 +2,47 @@
 
 </script>
 <template>
-  <UCard>
-    <template #header>
-      <Placeholder class="h-8" />
-    </template>
-
-    <template>
-      <div>
-        <h1 class="collect">I have problem and I love it</h1>
-      </div>
-      <div class="collect-btn">
-        <a href="https://youtube.com/@diskettekitchen/"><button class="bn29">Explore the Collection</button></a>
-      </div>
-    </template>
-
-    <template #footer>
-      <Placeholder class="h-8" />
-    </template>
-  </UCard>
+  <div id="problem">
+    <img class="collect-bg" src="/images/disk-tile.png" alt="">
+  </div>
+  <div>
+    <h1 class="collect-txt">I've got lots of interesting stuff here</h1>
+  </div>
+  <div class="collect-btn">
+    <a href="/collection">
+      <button class="bn29">Explore the Collection</button>
+    </a>
+  </div>
 </template>
 
 
-
 <style scoped>
-body {
-  margin: 0;
-  color: #fff;
-  background-color: #000;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,441&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
+
 .collect-btn {
   margin-top: 50px;
   text-align: center;
   position: relative;
   z-index: 1;
+  margin-bottom: 100px;
 }
-.bg-img {
-  height:750px;
+
+.collect-bg {
   width: 100vw;
+  position: absolute;
+  z-index: -1;
 }
-.collect {
+
+.collect-txt {
   margin: auto;
   text-align: center;
-  font-size: 100px;
+  font-size: 85px;
   font-family: "Young Serif";
-  margin-top: 30px;
-
+  margin-top: 75px;
+  width: 75vw;
+  z-index: 2;
+  position: relative;
+  color: white;
 }
 
 .bn29 {
@@ -57,11 +52,11 @@ body {
   border: none;
   outline: none;
   color: white;
-  font-style: 1.2em;
   position: relative;
   z-index: 1;
   cursor: pointer;
   background: none;
+  font-family: 'Young Serif', serif;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
 }
 
