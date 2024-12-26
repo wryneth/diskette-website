@@ -10,24 +10,22 @@
     </template>
     <template>
       <div class="contact-container">
-        <form action="https://www.formbackend.com/f/{your-identifier}" method="POST" data-netlify="true">
-          <div class="form-fields">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Soap Doe" required>
-          </div>
+        <form name="contact" method="POST" data-netlify="true">
+        <label>
+          Your Name:
+          <input type="text" name="name" />
+        </label>
+          <label>
+            ‎ Your Email:
+            <input type="email" name="email" />
+          </label>
+          <label>
+            ‎ ‎ ‎ ‎ Message:
+            <input type="text" name="text" />
+          </label>
 
-          <div class="form-fields">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-          </div>
-
-          <div class="form-fields">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Birds, birds, birds" required></textarea>
-          </div>
-
-          <button type="submit">Submit</button>
-        </form>
+        <button type="submit">Submit</button>
+      </form>
       </div>
     </template>
     <template #footer>
