@@ -5,7 +5,6 @@
     <NewVideo />
     <About />
     <Projects />
-    <Contact />
     <Collection />
     <Footer />
 

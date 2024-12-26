@@ -21,10 +21,10 @@ const items = ref([
     label: 'Projects',
     url: '#projects',
   },
-  {
-    label: 'Contact',
-    url: '#contact',
-  },
+//  {
+//    label: 'Contact',
+//    url: '#contact',
+//  },
   {
     label: 'Collection',
     url: '#problem',
