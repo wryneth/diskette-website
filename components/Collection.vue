@@ -6,18 +6,31 @@
     <img class="collect-bg" src="/images/disk-tile.png" alt="">
   </div>
   <div>
-    <h1 class="collect-txt">I've got lots of interesting stuff here</h1>
-  </div>
-  <div class="collect-btn">
-    <a href="/collection">
-      <button class="bn29">Explore the Collection</button>
-    </a>
+    <h1 class="collect-txt">Collection & gear</h1>
+
+
+    <H1 class="text">Stay tuned, this page will be up soon. I'm currently working on taking photos of everything.</H1>
+
+<!--      </div>
+      <div class="collect-btn">
+        <a href="/collection">
+          <button class="bn29">Explore the Collection</button>
+        </a> -->
   </div>
 </template>
 
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,441&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
+
+.text {
+  color: orange;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 250px;
+  font-size: 30px;
+  font-family: 'Ubuntu', sans-serif;
+}
 
 .collect-btn {
   margin-top: 50px;
@@ -37,7 +50,7 @@
   margin: auto;
   text-align: center;
   font-size: 85px;
-  font-family: "Young Serif";
+  font-family: "Young Serif", serif;
   margin-top: 75px;
   width: 75vw;
   z-index: 2;

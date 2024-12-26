@@ -3,10 +3,11 @@
 </script>
 
 <template>
-  <UCard id="videos">
+  <UCard class="vid" id="videos">
     <template #header>
       <h1 class="title">Recent Videos</h1>
     </template>
+<div class="card-container">
 
     <Card style="width: 25rem; overflow: hidden">
       <template #header>
@@ -68,7 +69,7 @@
         </div>
       </template>
     </Card>
-
+</div>
     <template #footer>
       <Placeholder class="h-8" />
     </template>
@@ -86,5 +87,14 @@
   display: inline-block;
   margin: 15px;
   font-family: 'Ubuntu', sans-serif;
+}
+.vid {
+  z-index: 5;
+}
+.card-container {
+  text-align: center;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;;
 }
 </style>

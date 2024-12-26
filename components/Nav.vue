@@ -1,22 +1,16 @@
-
-<template>
-  <div class="card">
-    <Menubar :model="items" />
-  </div>
-</template>
-
 <script setup>
 import { ref } from "vue";
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const items = ref([
-
   {
     label: 'Home',
     url: '#',
-
   },
   {
-    label: 'Recent Videos',
+    label: 'Videos',
     url: '#videos',
   },
   {
@@ -24,66 +18,135 @@ const items = ref([
     url: '#about',
   },
   {
+    label: 'Projects',
+    url: '#projects',
+  },
+  {
+    label: 'Contact',
+    url: '#contact',
+  },
+  {
     label: 'Collection',
     url: '#problem',
   },
   {
-    label: 'Projects',
-    url: '#projects',
-
-  },
-  {
-    label: 'Contact',
-    items: [
-      {
-        label: 'E-Mail',
-        url: 'mailto:diskette@diskettekitchen.com',
-      },
-      {
-        label: 'Instagram DM',
-        url: 'https://ig.me/m/diskettekitchen',
-      },
-      {
-        label: 'Bluesky DM',
-        url: 'https://bsky.app/profile/diskettekitchen.com',
-      },
-    ]
-  },
-  {
-    label: 'Diskette Data',
-    url: 'https://data.diskettekitchen.com',
-  },
-  {
     label: 'Store',
-    url: 'https://store.diskettekitchen.com',
+    url: 'http://store.diskettekitchen.com/',
   },
-
+  {
+    label: 'Data',
+    url: 'http://data.diskettekitchen.com/',
+  },
 ]);
 </script>
+
+
+<template>
+  <div class="card">
+    <Menubar :model="items">
+      <template #start>
+        <img src="../public/images/click.png" height="50" width="50" alt="Diskette Kitchen click wheel"/>
+
+      </template>
+      <template #item="{ item, props, hasSubmenu }">
+        <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
+          <a v-ripple :href="href" v-bind="props.action" @click="navigate">
+            <span>{{ item.label }}</span>
+          </a>
+        </router-link>
+        <a v-else v-ripple :href="item.url" :target="item.target" v-bind="props.action">
+          <span>{{ item.label }}</span>
+          <span v-if="hasSubmenu" class="pi pi-fw pi-angle-down" />
+        </a>
+      </template>
+      <template #end>
+        <div class="flex items-center gap-2">
+          <div>
+            <a href="https://youtube.com/@diskettekitchen">
+              <UButton class="social-btns"
+                       :padded="true"
+                       icon="grommet-icons:youtube"
+                       size="sm"
+                       color="red"
+                       square
+                       variant="solid"
+              />
+            </a>
+
+            <a href="https://bsky.app/profile/diskettekitchen.com">
+              <UButton class="social-btns"
+                       icon="ri:bluesky-fill"
+                       size="sm"
+                       color="blue"
+                       square
+                       variant="solid"
+                       href="https://bsky.app/"
+              />
+            </a>
+            <a href="https://instagram.com/diskettekitchen">
+              <UButton class="social-btns"
+                       icon="mdi-instagram"
+                       size="sm"
+                       color="pink"
+                       square
+                       variant="solid"
+              />
+            </a>
+
+            <a href="https://www.printables.com/@DisketteDesi_1620830">
+              <UButton class="social-btns"
+                       icon="simple-icons:printables"
+                       size="sm"
+                       color="orange"
+                       square
+                       variant="solid"
+              />
+            </a>
+
+            <a href="https://github.com/diskettekitchen">
+              <UButton class="social-btns"
+                       icon="ri:github-fill"
+                       size="sm"
+                       color="black"
+                       square
+                       variant="solid"
+              />
+            </a>
+            <!--            <a href="https://links.diskettekitchen.com">
+                          <UButton class="social-btns"
+                                   icon="heroicons:link"
+                                   size="sm"
+                                   color="green"
+                                   square
+                          />
+                        </a>
+            -->
+          </div>
+        </div>
+      </template>
+    </Menubar>
+  </div>
+</template>
+
+
 <style scoped>
-.p-menubar {
-  border-radius: 25px;
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 15px;
-  text-align: center;
+.p-menubar{
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 40px;
+  z-index: 5;
   position: fixed;
-  width: 98.3vw;
-  z-index: 9;
-
-}
-.p-menubar-item-label {
-  border-radius: 25px;
+  width: 95%;
   text-align: center;
-
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);;
+}
+.social-btns {
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 10px;
 }
 </style>
-
-
-<UButton
-    icon="grommet-icons:youtube"
-    size="sm"
-    color="red"
-    square
-    variant="solid"
-/>
