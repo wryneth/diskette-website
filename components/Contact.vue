@@ -10,7 +10,7 @@
     </template>
     <template>
       <div class="contact-container">
-        <form action="https://www.formbackend.com/f/{your-identifier}" method="POST">
+        <form action="https://www.formbackend.com/f/{your-identifier}" method="POST" netlify>
           <div class="form-fields">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Soap Doe" required>

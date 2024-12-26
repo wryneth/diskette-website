@@ -58,7 +58,7 @@
 
 .text {
   padding-left: 60px;
-  max-width: 600px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
   font-family: 'Young Serif', serif;
