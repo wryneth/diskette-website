@@ -23,7 +23,7 @@
 
           <div class="form-fields">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" placeholder="Birds, birds, birds" required></textarea>
           </div>
 
           <button type="submit">Submit</button>
