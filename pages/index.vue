@@ -1,7 +1,4 @@
 <template>
-  <html>
-  lang="fr">
-  </html>
 
   <div>
     <Nav />
