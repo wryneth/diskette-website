@@ -4,7 +4,7 @@
 
 
     <template #header>
-      <h1 class="title">Hello :)</h1>
+      <h1 class="title">About</h1>
     </template>
 
     <body>
@@ -54,6 +54,10 @@
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.responsive-image:hover {
+  transform: scale(1.02);
 }
 
 .text {

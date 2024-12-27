@@ -89,6 +89,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+.p-card:hover {
+  transform: scale(1.05);
 }
 
 .card-container {

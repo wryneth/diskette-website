@@ -135,12 +135,19 @@ const items = ref([
   border-radius: 40px;
   z-index: 5;
   position: fixed;
-  width: 95%;
+  width: 85%;
   text-align: center;
   top: 10px;
   left: 50%;
   transform: translate(-50%, 0);
-  box-shadow: 2px 2px 30px #89185C;}
+  box-shadow: 5px 5px 20px #89185C;
+  transition: transform 0.3s ease-in-out;
+
+}
+.p-menubar:hover{
+  transform: translate(-50%, 0) scale(1.03);
+}
+
 .social-btns {
   margin-left: 2px;
   margin-right: 2px;

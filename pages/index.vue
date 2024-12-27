@@ -2,17 +2,18 @@
   <div>
     <Nav />
     <Welcome />
-    <NewVideo />
+    <VidFeed />
     <About />
     <Projects />
     <Collection />
     <Contact />
-    <Footer />
 
 
   </div>
 </template>
 <script setup lang="ts">
+import RecentVideos from "~/components/RecentVideos.vue";
+
 useSeoMeta({
   title: 'Diskette Kitchen',
   ogTitle: 'Diskette Kitchen',

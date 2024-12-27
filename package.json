@@ -17,9 +17,12 @@
     "@primevue/icons": "^4.2.5",
     "@primevue/themes": "^4.2.5",
     "@vueform/nuxt": "^1.8.0",
+    "axios": "^1.7.9",
+    "lucide-vue-next": "^0.469.0",
     "nuxt": "^3.14.1592",
     "primeicons": "^7.0.0",
     "primevue": "^4.2.5",
+    "rss-parser": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
   },
