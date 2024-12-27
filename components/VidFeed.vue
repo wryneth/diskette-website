@@ -1,6 +1,6 @@
 <template>
   <div>
-    <LatestYouTubeVideos :channelId="'UCWCgjck7Tr8avF--km63lbw'" :apiKey="'process.env.TUBE'" />
+    <LatestYouTubeVideos :channelId="'UCWCgjck7Tr8avF--km63lbw'" :apiKey="process.env.TUBE" />
   </div>
 </template>
 
