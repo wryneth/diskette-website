@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      apiKey: process.env.VUE_APP_TUBE // Access API key from environment variable
+      apiKey: process.env.YOUTUBE_API // Access API key from environment variable
     };
   }
 };
