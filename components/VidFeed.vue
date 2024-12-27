@@ -1,15 +1,15 @@
 <template>
   <div>
-    <h1>Latest YouTube Videos</h1>
-    <LatestYouTubeVideos :channelId="'UCWCgjck7Tr8avF--km63lbw'" :apiKey="apiKey" />
+    <LatestYouTubeVideos :channelId="'UCWCgjck7Tr8avF--km63lbw'" :apiKey="'AIzaSyCKFe2JIrHVBKLpUV98wsD1F9LRYsEIez8'" />
   </div>
 </template>
 
-<script setup lang="ts">
-import { useRuntimeConfig } from '#app'
+<script>
 import LatestYouTubeVideos from './components/RecentVideos.vue';
 
-// Access the YouTube API key from runtime config
-const config = useRuntimeConfig()
-const apiKey = config.public.youtubeApiKey
+export default {
+  components: {
+    LatestYouTubeVideos
+  }
+};
 </script>
