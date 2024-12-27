@@ -17,10 +17,10 @@ const items = ref([
     label: 'Projects',
     url: '#projects',
   },
-  {
-    label: 'Collection',
-    url: '#problem',
-  },
+//  {
+//    label: 'Collection',
+//    url: '#problem',
+//  },
   {
     label: 'Contact',
     url: '#contact',
