@@ -6,6 +6,7 @@
     <About />
     <Projects />
     <Collection />
+    <Contact />
     <Footer />
 
 
@@ -20,3 +21,10 @@ useSeoMeta({
   ogImage: 'https://example.com/image.png',
 })
 </script>
+
+<style>
+html{
+  scroll-behavior: smooth;
+}
+
+</style>

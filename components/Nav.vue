@@ -6,10 +6,6 @@ const router = useRouter();
 
 const items = ref([
   {
-    label: 'Home',
-    url: '#',
-  },
-  {
     label: 'Videos',
     url: '#videos',
   },
@@ -21,13 +17,13 @@ const items = ref([
     label: 'Projects',
     url: '#projects',
   },
-//  {
-//    label: 'Contact',
-//    url: '#contact',
-//  },
   {
     label: 'Collection',
     url: '#problem',
+  },
+  {
+    label: 'Contact',
+    url: '#contact',
   },
   {
     label: 'Store',
@@ -45,8 +41,9 @@ const items = ref([
   <div class="card">
     <Menubar :model="items">
       <template #start>
-        <img src="../public/images/click.png" height="50" width="50" alt="Diskette Kitchen click wheel"/>
-
+        <a href="#">
+          <img src="../public/images/click.png" height="50" width="50" alt="Diskette Kitchen click wheel"/>
+        </a>
       </template>
       <template #item="{ item, props, hasSubmenu }">
         <router-link v-if="item.route" v-slot="{ href, navigate }" :to="item.route" custom>
@@ -142,8 +139,8 @@ const items = ref([
   text-align: center;
   top: 10px;
   left: 50%;
-  transform: translate(-50%, 0);;
-}
+  transform: translate(-50%, 0);
+  box-shadow: 2px 2px 30px #89185C;}
 .social-btns {
   margin-left: 2px;
   margin-right: 2px;
