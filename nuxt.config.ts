@@ -15,6 +15,12 @@ export default defineNuxtConfig({
 
   },
 
+  runtimeConfig: {
+    public: {
+      youtubeApiKey: process.env.VUE_APP_YOUTUBE_API_KEY // The environment variable
+    },
+  },
+
   modules: [
     '@primevue/nuxt-module',
     '@nuxt/ui',

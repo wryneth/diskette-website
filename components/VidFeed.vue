@@ -4,17 +4,11 @@
   </div>
 </template>
 
-<script>
-import LatestYouTubeVideos from './components/RecentVideos.vue';
+<script setup lang="ts">
+import { useRuntimeConfig } from '#app'
 
-export default {
-  components: {
-    LatestYouTubeVideos
-  },
-  data() {
-    return {
-      apiKey: process.env.YOUTUBE_API // Access API key from environment variable
-    };
-  }
-};
+const config = useRuntimeConfig()
+console.log('YouTube API Key:', config.public.youtubeApiKey) // Debugging log
+
+const apiKey = config.public.youtubeApiKey
 </script>
