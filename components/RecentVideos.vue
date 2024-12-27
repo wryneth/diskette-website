@@ -8,7 +8,7 @@
 
       <div v-if="error" class="error">Error: {{ error }}</div>
 
-      <div v-if="videos.length === 0" class="no-videos">No videos found.</div>
+      <div v-if="videos.length === 0" class="no-videos">Maybe check your network connection.</div>
 
       <div v-if="videos.length > 0" class="video-cards">
         <div

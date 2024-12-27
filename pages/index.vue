@@ -5,7 +5,7 @@
     <VidFeed />
     <About />
     <Projects />
-    <Collection />
+<!--    <Collection /> -->
     <Contact />
 
 

@@ -41,9 +41,10 @@
 }
 
 .collect-bg {
-  width: 100vw;
   position: absolute;
   z-index: -1;
+  overflow: hidden;
+  height: 100%;
 }
 
 .collect-txt {
