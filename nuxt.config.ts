@@ -5,6 +5,9 @@ import Aura from '@primevue/themes/aura';
 export default defineNuxtConfig({
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [
@@ -14,13 +17,6 @@ export default defineNuxtConfig({
     }
 
   },
-
-  runtimeConfig: {
-    public: {
-      youtubeApiKey: process.env.VUE_APP_YOUTUBE_API_KEY || '' // Default to empty string if not set
-    }
-  },
-
 
   modules: [
     '@primevue/nuxt-module',

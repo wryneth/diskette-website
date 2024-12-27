@@ -67,6 +67,7 @@ const items = ref([
                        color="red"
                        square
                        variant="solid"
+                       aria-label="YouTube"
               />
             </a>
 
@@ -78,6 +79,7 @@ const items = ref([
                        square
                        variant="solid"
                        href="https://bsky.app/"
+                       aria-label="Bluesky"
               />
             </a>
             <a href="https://instagram.com/diskettekitchen">
@@ -87,6 +89,7 @@ const items = ref([
                        color="pink"
                        square
                        variant="solid"
+                       aria-label="Instagram"
               />
             </a>
 
@@ -97,6 +100,7 @@ const items = ref([
                        color="orange"
                        square
                        variant="solid"
+                       aria-label="Printables"
               />
             </a>
 
@@ -107,6 +111,7 @@ const items = ref([
                        color="black"
                        square
                        variant="solid"
+                       aria-label="GitHub"
               />
             </a>
             <!--            <a href="https://links.diskettekitchen.com">
