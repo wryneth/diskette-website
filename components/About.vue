@@ -9,7 +9,7 @@
 
     <body>
     <div class="container">
-      <img src="/images/studio.png" alt="Image" class="responsive-image">
+      <img src="/images/studio-headshot.png" alt="Image" class="responsive-image">
       <div class="text">
         <p>Well hi there, I'm Wren. I've filled this little room with everything I think is cool,
           from old tech, to new tech, to audio. I stumble my way through repairs, projects and the occasional rant armed with my trusty heirloom apron and two remaining braincells.</p>
@@ -61,7 +61,7 @@
 }
 
 .text {
-  padding-left: 60px;
+  padding-left: 75px;
   max-width: 750px;
   margin-left: auto;
   margin-right: auto;
