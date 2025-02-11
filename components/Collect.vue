@@ -1,67 +1,52 @@
-<script setup lang="ts">
-
-</script>
 <template>
-  <div id="problem">
-    <img class="collect-bg" src="/images/disk-tile.png" alt="">
-  </div>
-  <div>
-    <h1 class="collect-txt">Collection & gear</h1>
-
-
-    <H1 class="text">Stay tuned, this page will be up soon. I'm currently working on taking photos of everything.</H1>
-
-<!--      </div>
-      <div class="collect-btn">
-        <a href="/collection">
-          <button class="bn29">Explore the Collection</button>
-        </a> -->
+  <div class="collect-contain" id="problem">
+    <h1 class="linear-wipe">Diskette://Collection</h1>
+    <div class="collect-btn">
+      <a href="/collection"><button class="bn29">Explore</button></a>
+    </div>
   </div>
 </template>
 
-
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,441&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
 
-.text {
-  color: orange;
+
+.linear-wipe {
+  margin-top: 200px;
+  margin-bottom: 200px;
+  font-size: 10vw;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 250px;
-  font-size: 30px;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Imbue', serif;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #FFF 20%, #89185C 40%, #C11A7F 60%, #FFF 80%);
+  background-size: 200% auto;
+
+  color: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine 3s linear infinite;
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
 }
 
 .collect-btn {
   margin-top: 50px;
   text-align: center;
   position: relative;
+  padding-bottom: 250px;
   z-index: 1;
-  margin-bottom: 100px;
-}
 
-.collect-bg {
-  position: absolute;
-  z-index: -1;
-  overflow: hidden;
-  height: 100%;
-}
-
-.collect-txt {
-  margin: auto;
-  text-align: center;
-  font-size: 85px;
-  font-family: "Young Serif", serif;
-  margin-top: 75px;
-  width: 75vw;
-  z-index: 2;
-  position: relative;
-  color: white;
 }
 
 .bn29 {
   font-size: 35px;
-  width: 450px;
+  width: 350px;
   height: 110px;
   border: none;
   outline: none;
@@ -70,8 +55,8 @@
   z-index: 1;
   cursor: pointer;
   background: none;
-  font-family: 'Young Serif', serif;
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+  font-family: 'Young Serif', serif;
 }
 
 .bn29:before,
@@ -122,6 +107,13 @@
 .wrapper {
   z-index: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  filter: blur(150px);
 }
+
 
 </style>

@@ -51,9 +51,8 @@ const handleSubmit = async () => {
     <template #header>
       <h1 class="title">Contact Me</h1>
     </template>
-
-    <div class="w-full max-w-4xl mx-auto my-10 px-4 sm:px-6 lg:px-8">
-      <div class="bg-yellow-100 shadow-xl rounded-lg overflow-hidden">
+    <div  class="w-full max-w-4xl mx-auto my-10 px-4 sm:px-6 lg:px-8">
+      <div class="bg-yellow-400 shadow-xl rounded-lg overflow-hidden">
         <div class="p-6 sm:p-10">
           <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Contact Me</h2>
           <form
@@ -142,9 +141,7 @@ const handleSubmit = async () => {
         </div>
       </div>
     </div>
-
     <template #footer>
-<h1>If it works better, you can also send me a DM on Bluesky or Instagram</h1>
     </template>
   </UCard>
 </template>

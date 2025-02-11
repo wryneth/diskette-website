@@ -17,21 +17,21 @@ const items = ref([
     label: 'Projects',
     url: '#projects',
   },
-//  {
-//    label: 'Collection',
-//    url: '#problem',
-//  },
+  {
+    label: 'Collection',
+    url: '#problem',
+  },
   {
     label: 'Contact',
     url: '#contact',
   },
   {
     label: 'Store',
-    url: 'http://store.diskettekitchen.com/',
+    url: 'https://store.diskettekitchen.com/',
   },
   {
-    label: 'Data',
-    url: 'http://data.diskettekitchen.com/',
+    label: 'Extras',
+    url: 'https://extras.diskettekitchen.com/',
   },
 ]);
 </script>
@@ -132,7 +132,7 @@ const items = ref([
 
 
 <style scoped>
-.p-menubar{
+.p-menubar {
   float: right;
   margin-left: 10px;
   margin-right: 10px;

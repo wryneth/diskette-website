@@ -3,17 +3,20 @@
   <div>
     <Nav />
     <Welcome />
+    <Scroll />
     <VidFeed />
     <About />
     <Projects />
-<!--    <Collection /> -->
+    <Collect />
     <Contact />
+    <Footer />
 
 
   </div>
 </template>
 <script setup lang="ts">
-import RecentVideos from "~/components/RecentVideos.vue";
+
+import Scroll from "~/components/Scroll.vue";
 
 useSeoMeta({
   title: 'Diskette Kitchen',

@@ -42,7 +42,6 @@ body {
   border: none;
   outline: none;
   color: white;
-  font-style: 1.2em;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -103,7 +102,6 @@ body {
   margin: auto;
   padding-top: 350px;
   position: relative;
-  fill: blue;
 
 }
 .wrapper {

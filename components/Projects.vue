@@ -14,7 +14,7 @@
         <img alt="user header" src="/images/diskette-case.png"/>
       </template>
       <template #title>Diskette Case</template>
-      <template #subtitle>A fully 3d printable NAS chasis</template>
+      <template #subtitle>A fully 3d printable NAS chassis</template>
       <template #content>
         <p class="m-0">
           Stylish design featuring a Voroni lattice for fully passive cooling, fits on most FFF printers, simple to
