@@ -32,7 +32,7 @@
 
     </div>
     <div id="keebs">
-      <OtherCollectCard item='Apple Something' year="1986" image="/images/collection/mac.jpg"/>
+      <OtherCollectCard item='Macintosh Plus' year="1986" image="/images/collection/mac.jpg"/>
       <OtherCollectCard item='IBM Model M' year="1986" image="/images/collection/m.jpg"/>
       <OtherCollectCard item='Apple Aluminum' year="2009" quantity="2x" image="/images/collection/alumi.jpg"/>
       <OtherCollectCard item='Bondi Blue' year="1998" image="/images/collection/bondi.jpg"/>
