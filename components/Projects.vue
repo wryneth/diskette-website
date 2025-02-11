@@ -23,8 +23,8 @@
       </template>
       <template #footer>
         <div class="flex gap-4 mt-1">
-          <Button label="Watch Video" class="w-full"/>
-          <Button label="Download" severity="secondary" outlined class="w-full"/>
+          <Button label="Watch Video" as="a" href="https://youtu.be/kKrAZ_lCJe4?si=nROoQ0F01PMuKBue" class="w-full"/>
+          <Button label="Download" as="a" href="https://www.printables.com/model/1073452-diskette-case-modular-open-source-nas-chassis" severity="secondary" outlined class="w-full"/>
         </div>
       </template>
     </Card>
@@ -42,8 +42,8 @@
       </template>
       <template #footer>
         <div class="flex gap-4 mt-1">
-          <Button label="Watch Video" class="w-full"/>
-          <Button label="Download" severity="secondary" outlined class="w-full"/>
+          <Button label="Watch Video" as="a"href="https://youtu.be/pcYXZlmIuOg?si=2QXIEU451jFLxBIm" class="w-full"/>
+          <Button label="Download" as="a" href="https://www.printables.com/model/981437-ipod-shuffle-4th-gen-dismantled-art" severity="secondary" outlined class="w-full"/>
         </div>
       </template>
     </Card>
