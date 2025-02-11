@@ -11,7 +11,7 @@
     <div class="card-container">
     <Card style="width: 25rem; overflow: hidden">
       <template #header>
-        <img alt="user header" src="/images/diskette-case.png"/>
+        <NuxtImg format="webp" alt="user header" src="/images/diskette-case.png"/>
       </template>
       <template #title>Diskette Case</template>
       <template #subtitle>A fully 3d printable NAS chassis</template>
@@ -30,7 +30,7 @@
     </Card>
     <Card style="width: 25rem; overflow: hidden">
       <template #header>
-        <img alt="user header" src="/images/ipod.png"/>
+        <NuxtImg format="webp" alt="user header" src="/images/ipod.png"/>
       </template>
       <template #title>iPod Shuffle Art</template>
       <template #subtitle>E-waste --> art!</template>
@@ -49,7 +49,7 @@
     </Card>
     <Card style="width: 25rem; overflow: hidden">
       <template #header>
-        <img alt="user header" src="/images/soon.png"/>
+        <NuxtImg format="webp" alt="user header" src="/images/soon.png"/>
       </template>
       <template #title>More Coming Soon</template>
       <template #subtitle>Don't worry, I'm still on my bullshit</template>
