@@ -1,7 +1,7 @@
 <template>
   <Card style="width: 25rem; overflow: hidden">
     <template #header>
-      <img alt="user header" :src="`${image}`">
+      <NuxtImg format="webp" alt="user header" :src="`${image}`"/>
     </template>
     <template #title>{{ item }} <Badge :value="`${quantity}`" severity="contrast" size="xlarge"></Badge>
     </template>
