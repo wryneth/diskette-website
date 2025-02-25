@@ -34,7 +34,7 @@ const items = ref([
     <Menubar :model="items">r
       <template #start>
         <a href="/">
-          <img src="/images/click.png" height="50" width="50" alt="Click wheel"/>
+          <img src="/images/unity-small.png" height="55" width="55" alt="Diskette Unity logo"/>
         </a>
       </template>
       <template #item="{ item, props, hasSubmenu }">

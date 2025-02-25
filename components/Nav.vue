@@ -42,7 +42,7 @@ const items = ref([
     <Menubar :model="items">
       <template #start>
         <a href="#">
-          <img src="../public/images/click.png" height="50" width="50" alt="Diskette Kitchen click wheel"/>
+          <img src="/images/unity-small.png" height="55" width="55" alt="Diskette Unity logo"/>
         </a>
       </template>
       <template #item="{ item, props, hasSubmenu }">
@@ -93,7 +93,7 @@ const items = ref([
               />
             </a>
 
-            <a href="https://www.printables.com/@DisketteDesi_1620830">
+            <a href="https://www.printables.com/@Diskette">
               <UButton class="social-btns"
                        icon="simple-icons:printables"
                        size="sm"

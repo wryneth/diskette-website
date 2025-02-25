@@ -18,7 +18,6 @@
 </template>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,441&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap');
 
 body {
   margin: 0;
@@ -30,7 +29,7 @@ body {
   margin-top: 50px;
   text-align: center;
   position: relative;
-  padding-bottom: 250px;
+  padding-bottom: 350px;
   z-index: 1;
 
 }
@@ -102,6 +101,8 @@ body {
   margin: auto;
   padding-top: 350px;
   position: relative;
+  -webkit-filter: drop-shadow( 3px 3px 10px rgba(255, 255, 255, .3));
+  filter: drop-shadow( 1px 1px 10px rgba(255, 255, 255, .3));
 
 }
 .wrapper {
