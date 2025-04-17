@@ -1,38 +1,38 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
 
-import Aura from '@primevue/themes/aura';
 
 export default defineNuxtConfig({
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-      charset: 'utf-8',
-      viewport: 'width=device-width, initial-scale=1',
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      ]
-
-    }
-
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
+  ui: {
+    colorMode: true
+  },
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
   },
 
   modules: [
-    '@primevue/nuxt-module',
-    '@nuxt/ui',
-    '@nuxt/icon',
     '@nuxtjs/color-mode',
-    '@nuxt/image'
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/ui',
+    'v-gsap-nuxt',
+    'shadcn-nuxt',
+    '@tresjs/nuxt',
   ],
-
-  primevue: {
-    options: {
-      theme: {
-        preset: Aura
-      }
-    }
-  },
-
-  compatibilityDate: '2024-12-12'
+    shadcn: {
+      prefix: '',
+      componentDir: './components/ui'
+    },
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light',    // fallback value if not system preference found
+    classSuffix: ''       // This ensures dark mode works with 'dark' class
+  }
 })
