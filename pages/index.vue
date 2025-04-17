@@ -35,7 +35,10 @@
   }
   </style>
   <script setup lang="ts">
-  import VideoFeed from "~/components/VideoFeed.vue";
-  import ProjectCard from "~/components/ProjectCard.vue";
-  import Contact from "~/components/Contact.vue";
+  useSeoMeta({
+    title: 'Diskette Kitchen',
+    ogTitle: 'Diskette Kitchen',
+    description: 'Tech involved projects, repairs, and general shenanigans.',
+    ogDescription: 'Tech involved projects, repairs, and general shenanigans.',
+  })
   </script>
