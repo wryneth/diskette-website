@@ -2,9 +2,9 @@
   <canvas ref="canvas" :style="{ width: '100%', height: '100%' }"></canvas>
   <div class="logo">
     <picture class="object-center">
-      <source srcset="/images/superwide.svg" media="(max-width: 200px)">
-      <source srcset="/images/stack.svg" media="(max-width: 1200px)">
-      <img src="/images/superwide.svg" alt="Diskette Kitchen" style="width:auto;">
+      <source srcset="/images/WordWide.svg" media="(max-width: 200px)">
+      <source srcset="/images/WordStack.svg" media="(max-width: 1200px)">
+      <img src="/images/WordWide.svg" alt="Diskette Kitchen" style="width:auto;">
     </picture>
     <a class="object-center" href="https://youtube.com/@DisketteKitchen">
       <ActionButton title="Watch Now" class="watch-btn"/>
