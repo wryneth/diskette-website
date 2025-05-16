@@ -4,7 +4,7 @@
         class="flex h-16 items-center justify-between rounded-full border border-white/20 bg-white/50 px-6 shadow-sm backdrop-blur-md border-black-40 dark:bg-black/0">
       <!-- Logo -->
       <div class=" flex items-center">
-          <img src="/images/weave.svg" alt="Weave" class="w-14 h-14"/>
+          <img src="/images/eyes.svg" alt="Weave" class="w-14 h-14"/>
 
       </div>
 
@@ -87,7 +87,7 @@ const navigationItems = [
   {name: 'Videos', href: '#vidfeed', current: false},
   {name: 'About', href: '#about', current: false},
   {name: 'Projects', href: '#projects', current: false},
-//  {name: 'Collection', href: '#collect', current: false},
+  {name: 'Collection', href: '#collect', current: false},
   {name: 'Contact', href: '#contact', current: false},
   {name: 'Store', href: 'https://store.diskettekitchen.com', current: false},
   {name: 'Extras', href: 'https://extras.diskettekitchen.com', current: false},
