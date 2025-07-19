@@ -1,66 +1,9 @@
-<template>
-    <Card id="vidfeed" class="m-5">
-      <Card class="ms-5 me-5">
-        <h1 class="text-center text-4xl font-bold font-calistoga">Recent Uploads</h1>
-      </Card>
-
-      <div v-if="loading" class="flex justify-center items-center py-10">
-        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary dark:border-primary"></div>
-      </div>
-
-      <div v-else-if="error"
-           class="bg-red-100 dark:bg-red-900 border border-red-400 dark:border-red-700 text-red-700 dark:text-red-200 px-4 py-3 rounded">
-        <p>{{ error }}</p>
-      </div>
-
-      <div v-else class=" ms-5 me-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div
-            v-for="video in videos"
-            :key="video.id"
-            class="video-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-
-          <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank" class="block">
-            <div class="relative">
-              <img :src="video.thumbnail" :alt="video.title" class="w-full aspect-video object-cover">
-              <div class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
-                {{ formatDuration(video.duration) }}
-              </div>
-            </div>
-
-            <div class="p-4">
-              <h3 class="font-ubuntu font-semibold text-lg mb-2 line-clamp-2 dark:text-white">{{ video.title }}</h3>
-
-              <div class="flex font-ubuntu justify-between text-sm text-gray-500 dark:text-gray-400">
-                <span>{{ formatViews(video.viewCount) }} views</span>
-                <span>{{ formatDate(video.publishedAt) }}</span>
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </Card>
-</template>
-
-<script setup>
+<script setup lang="ts">
 import {Card} from '@/components/ui/card'
 
+const config = useRuntimeConfig();
 
-const props = defineProps({
-  channelId: {
-    type: String,
-    required: true,
-    default: 'UCWCgjck7Tr8avF--km63lbw'
-  },
-  maxResults: {
-    type: Number,
-    default: 3
-  },
-  apiKey: {
-    type: String,
-    required: true,
-    default: 'AIzaSyAZlFN86GV9UNJk3oIfOcICVt-t7ANGC8E'
-  }
-});
+const channelId = 'UCWCgjck7Tr8avF--km63lbw'
 
 const videos = ref([]);
 const loading = ref(true);
@@ -74,64 +17,35 @@ onMounted(() => {
 
 const fetchVideos = async () => {
   try {
-    // Step 1: Get channel uploads playlist ID
     const channelResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${props.channelId}&key=${props.apiKey}`
+        `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${channelId}&key=${config.public.apiKey}`
     );
-
-    if (!channelResponse.ok) {
-      throw new Error('Failed to fetch channel data');
-    }
 
     const channelData = await channelResponse.json();
 
-    if (!channelData.items || channelData.items.length === 0) {
-      throw new Error('Channel not found');
-    }
-
     const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
 
-    // Step 2: Get videos from the uploads playlist
     const videosResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=${props.maxResults}&playlistId=${uploadsPlaylistId}&key=${props.apiKey}`
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=3&playlistId=${uploadsPlaylistId}&key=${config.public.apiKey}`
     );
-
-    if (!videosResponse.ok) {
-      throw new Error('Failed to fetch videos');
-    }
 
     const videosData = await videosResponse.json();
 
-    if (!videosData.items || videosData.items.length === 0) {
-      throw new Error('No videos found');
-    }
-
-    // Step 3: Get additional video details (duration, view count)
     const videoIds = videosData.items.map(item => item.snippet.resourceId.videoId).join(',');
 
     const videoDetailsResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=${videoIds}&key=${props.apiKey}`
+        `https://www.googleapis.com/youtube/v3/videos?part=contentDetails,statistics&id=${videoIds}&key=${config.public.apiKey}`
     );
-
-    if (!videoDetailsResponse.ok) {
-      throw new Error('Failed to fetch video details');
-    }
 
     const videoDetailsData = await videoDetailsResponse.json();
 
-    // Step 4: Get channel details for thumbnails
     const channelDetailsResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${props.channelId}&key=${props.apiKey}`
+        `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=${config.public.apiKey}`
     );
-
-    if (!channelDetailsResponse.ok) {
-      throw new Error('Failed to fetch channel details');
-    }
 
     const channelDetailsData = await channelDetailsResponse.json();
     const channelThumbnail = channelDetailsData.items[0].snippet.thumbnails.default.url;
 
-    // Step 5: Combine all data
     videos.value = videosData.items.map(item => {
       const videoId = item.snippet.resourceId.videoId;
       const videoDetails = videoDetailsData.items.find(detail => detail.id === videoId);
@@ -156,9 +70,7 @@ const fetchVideos = async () => {
   }
 };
 
-// Utility functions for formatting
 const formatDuration = (duration) => {
-  // Convert ISO 8601 duration to readable format
   const match = duration.match(/PT(\d+H)?(\d+M)?(\d+S)?/);
 
   const hours = (match[1] ? match[1].replace('H', '') : 0);
@@ -201,6 +113,48 @@ const formatDate = (date) => {
   }
 };
 </script>
+
+<template>
+    <Card class="m-5" id="vidfeed">
+      <Card class="ms-5 me-5">
+        <h1 class="text-center text-4xl font-bold font-calistoga">Recent Uploads</h1>
+      </Card>
+
+      <div v-if="loading" class="flex justify-center items-center py-10">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary dark:border-primary"></div>
+      </div>
+
+      <Card v-else-if="error" class="dark:bg-red-900 border-red-400  text-red-700 dark:text-red-200 p-5 me-5 ms-5 text-center">
+        <p>{{ error }}</p>
+      </Card>
+
+      <div v-else class=" ms-5 me-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div
+            v-for="video in videos"
+            :key="video.id"
+            class="video-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+
+          <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank" class="block">
+            <div class="relative">
+              <img :src="video.thumbnail" :alt="video.title" class="w-full aspect-video object-cover">
+              <div class="absolute bottom-2 right-2 bg-black bg-opacity-80 text-white text-xs px-2 py-1 rounded">
+                {{ formatDuration(video.duration) }}
+              </div>
+            </div>
+
+            <div class="p-4">
+              <h3 class="font-ubuntu font-semibold text-lg mb-2 line-clamp-2 dark:text-white">{{ video.title }}</h3>
+
+              <div class="flex font-ubuntu justify-between text-sm text-gray-500 dark:text-gray-400">
+                <span>{{ formatViews(video.viewCount) }} views</span>
+                <span>{{ formatDate(video.publishedAt) }}</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </Card>
+</template>
 
 <style scoped>
 

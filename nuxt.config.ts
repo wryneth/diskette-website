@@ -1,8 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from "@tailwindcss/vite";
 
-
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      apiKey: process.env.NUXT_YOUTUBE,
+    },
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
@@ -22,7 +26,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/ui',
-    'v-gsap-nuxt',
     'shadcn-nuxt',
     '@tresjs/nuxt',
   ],
