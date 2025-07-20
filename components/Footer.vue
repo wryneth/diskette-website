@@ -4,8 +4,13 @@ import {Card} from '@/components/ui/card'
 </script>
 
 <template>
-<Card class="m-5">
-  <a href="#" class="text-center">Back to top</a>
-  <USeparator label="Designed and built with ❤️ in Bozeman, Montana ©2025 Diskette Media" />
+<Card class="m-5 p-2">
+  <div class="inline-flex">
+    <a href="#" class="text-center ">
+      <Button>Back to top</Button>
+    </a>
+    <h1 class="ms-3 flex mt-auto mb-auto">Built with ❤ in Bozeman, Montana ©2025 Diskette Media</h1>
+  </div>
+
 </Card>
 </template>w

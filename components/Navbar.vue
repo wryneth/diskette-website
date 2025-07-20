@@ -1,11 +1,11 @@
 <template>
   <div class="fixed top-5 left-0 right-0 z-3 mx-auto w-full max-w-5xl p-5 ">
-    <nav class="flex h-16 items-center justify-between rounded-full border border-white/20 bg-white/50 px-6 shadow-sm backdrop-blur-md border-black-40 dark:bg-black/0">
-      <!-- Logo -->
-      <div class=" flex items-center">
-          <img src="/images/eyes.svg" alt="Weave" class="w-14 h-14"/>
+    <nav class="flex h-16 justify-between rounded-full border border-white/20 bg-white/50 px-2 shadow-sm backdrop-blur-md border-black-40 dark:bg-black/0">
+      <a href="/">
+        <img src="/images/eye.svg" alt="Eye" class="w-14 h-14"/>
 
-      </div>
+      </a>
+
 
       <!-- Desktop Navigation -->
       <div class="hidden font-ubuntu items-center gap-1 md:flex p-2">
@@ -14,10 +14,7 @@
             :key="item.name"
             :href="item.href"
             class="rounded-full px-3 py-1.5 text-m font-medium transition-colors hover:bg-white/10 dark:hover:bg-slate-800/20"
-            :class="{
-            'bg-white/20 text-gray-900 dark:bg-slate-800/20 dark:text-white': item.current,
-            'text-gray-700 dark:text-gray-300': !item.current
-          }">{{ item.name }}
+            >{{ item.name }}
         </a>
 
         <SocialLinks />
@@ -53,21 +50,13 @@
     </nav>
 
     <!-- Mobile Navigation Dropdown -->
-    <div
-        v-if="isMenuOpen"
-        class="mt-2 overflow-hidden rounded-xl border border-white/60 bg-white/50 backdrop-blur-md dark:border-black-40 dark:bg-black/30 md:hidden"
-    >
+    <div v-if="isMenuOpen" class="mt-2 overflow-hidden rounded-xl border border-white/60 bg-white/50 backdrop-blur-md dark:border-black-40 dark:bg-black/30 md:hidden">
       <div class="flex flex-col p-2">
         <a
             v-for="item in navigationItems"
             :key="item.name"
             :href="item.href"
-            class="rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 dark:hover:bg-slate-800/20"
-            :class="{
-            'bg-white/20 text-gray-900 dark:bg-slate-800/20 dark:text-white': item.current,
-            'text-gray-700 dark:text-gray-300': !item.current
-          }"
-        >
+            class="rounded-lg px-3 py-2 text-sm font-medium transition-colors hover:bg-white/10 dark:hover:bg-slate-800/20">
           {{ item.name }}
         </a>
       </div>
@@ -83,13 +72,14 @@ const isMenuOpen = ref(false)
 const isDark = ref(false)
 
 const navigationItems = [
-  {name: 'Home', href: '#', current: true},
-  {name: 'Videos', href: '#vidfeed', current: false},
-  {name: 'About', href: '#about', current: false},
-  {name: 'Projects', href: '#projects', current: false},
-  {name: 'Contact', href: '#contact', current: false},
-  {name: 'Store', href: 'https://store.diskettekitchen.com', current: false},
-  {name: 'Extras', href: 'https://extras.diskettekitchen.com', current: false},
+  {name: 'Videos', href: '#vidfeed'},
+  {name: 'About', href: '#about'},
+  {name: 'Projects', href: '#projects'},
+  {name: 'Lanterns', href: '#lanterns'},
+  {name: 'Studio', href: '#studio'},
+  {name: 'Contact', href: '#contact'},
+  {name: 'Store', href: 'https://store.diskettekitchen.com'},
+  {name: 'Extras', href: 'https://extras.diskettekitchen.com'},
 
 ]
 

@@ -41,6 +41,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      dotenv:
+        specifier: ^16.5.0
+        version: 16.5.0
       embla-carousel-vue:
         specifier: ^8.6.0
         version: 8.6.0(vue@3.5.13(typescript@5.8.3))
@@ -2222,8 +2225,8 @@ packages:
     resolution: {integrity: sha512-1gxPBJpI/pcjQhKgIU91II6Wkay+dLcN3M6rf2uwP8hRur3HtQXjVrdAK3sjC0piaEuxzMwjXChcETiJl47lAQ==}
     engines: {node: '>=18'}
 
-  dotenv@16.4.7:
-    resolution: {integrity: sha512-47qPchRCykZC03FhkYAhrvwU4xDBFIj1QPqaarj6mdM/hgUzfPHcpkHJOn3mJAufFeeAxAzeGsr5X0M4k6fLZQ==}
+  dotenv@16.5.0:
+    resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
     engines: {node: '>=12'}
 
   draco3d@1.5.7:
@@ -5544,7 +5547,7 @@ snapshots:
       citty: 0.1.6
       consola: 3.4.2
       destr: 2.0.5
-      dotenv: 16.4.7
+      dotenv: 16.5.0
       git-url-parse: 16.0.1
       is-docker: 3.0.0
       ofetch: 1.4.1
@@ -7028,7 +7031,7 @@ snapshots:
       chokidar: 4.0.3
       confbox: 0.2.2
       defu: 6.1.4
-      dotenv: 16.4.7
+      dotenv: 16.5.0
       exsolve: 1.0.4
       giget: 2.0.0
       jiti: 2.4.2
@@ -7405,7 +7408,7 @@ snapshots:
     dependencies:
       type-fest: 4.39.1
 
-  dotenv@16.4.7: {}
+  dotenv@16.5.0: {}
 
   draco3d@1.5.7: {}
 

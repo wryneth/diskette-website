@@ -1,15 +1,13 @@
 <template>
-    <Card id="projects" class="flex flex-col m-5 items-center  lg:flex-row">
-      <div class="w-full lg:w-1/2 ms-5 rounded-sm">
-        <Card class="mr-5 p-2">
-          <img :src="`images/projects/${Image}.webp`" />
-        </Card>
+    <Card class="flex flex-col ms-5 me-5 items-center  lg:flex-row p-5">
+      <div class="w-full lg:w-1/2">
+          <img class="rounded-lg" :src="`images/projects/${Image}.webp`" />
       </div>
 
       <div class="flex w-full flex-col space-y-4 px-12 lg:mt-0">
-        <h2 class="font-calistoga font-bold text-6xl font-bold text-center">{{ ProjectTitle }}</h2>
+        <h2 class="font-calistoga lg:text-6xl md:text-5xl text-4xl font-bold text-center  ">{{ ProjectTitle }}</h2>
 
-        <p class="font-ubuntu text-3xl">{{ ProjectDescription }}</p>
+        <p class="font-ubuntu lg:text-3xl text-xl">{{ ProjectDescription }}</p>
 
         <div class="flex items-center gap-5 mb-10">
           <a :href="`${videoLink}`">
@@ -56,15 +54,3 @@ defineProps({
 
 })
 </script>
-
-<style scoped>
-img {
-  border-radius: 10px;
-  border: 0px solid #aaa;
-  overflow: hidden;
-  object-fit: cover;
-  width: 100%;
-  height: 350px;
-  margin: auto;
-}
-</style>

@@ -1,7 +1,7 @@
 <template>
   <Card id="about" class="m-5">
     <div class="card-container">
-      <img src="/images/wren.webp" alt="Headshot of wren"/>
+      <img class="rounded-lg" src="/images/wren.webp" alt="Headshot of wren"/>
       <div class="card-body">
         <h1 class="about-heading">About</h1>
         <h3 class="about-text">
@@ -46,7 +46,6 @@ img {
   height: 600px;
   margin-top: -20px;
   margin-bottom: -20px;
-  border-radius: 1%;
 }
 
 @media (max-width: 1200px) {
@@ -60,14 +59,19 @@ img {
   }
 
   img {
-    border-radius: 10%;
     object-fit: cover;
     width: 450px;
     height: 450px;
     margin: auto;
     display: flex;
     justify-content: center;
+    border-radius: 30px;
 
+
+  }
+  .about-text {
+    font-family: Ubuntu, sans-serif;
+    font-size: 30px;
   }
 }
 
@@ -85,9 +89,14 @@ img {
     font-size: 25px;
   }
   img {
-    border-radius: 50%;
     width: 300px;
     height: 300px;
+    border-radius: 300px;
+
+  }
+  .about-text {
+    font-family: Ubuntu, sans-serif;
+    font-size: 20px;
   }
 }
 
