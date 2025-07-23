@@ -9,19 +9,8 @@
     </Card>
     <img src="/images/lanternWide.jpg" class="rounded-lg md:h-120 object-cover h-150" alt="All diskette lanterns in a row">
     <a href="/lanterns" >
-      <ActionButton title="Learn more" class="watch-btn"/>
+      <ActionButton title="Learn more" class="flex m-auto absolute"/>
     </a>
   </Card>
 
 </template>
-
-<style scoped>
-.watch-btn {
-  position: absolute;
-  background-color: rebeccapurple;
-  left: 50%;
-  margin-top: 45px;
-  transform: translate(-50%, -300%);
-
-}
-</style>

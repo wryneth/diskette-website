@@ -1,3 +1,8 @@
+<script setup>
+import {Button} from '@/components/ui/button'
+import {Card} from '@/components/ui/card'
+</script>
+
 <template>
   <Card id="about" class="m-5">
     <div class="card-container">
@@ -7,15 +12,11 @@
         <h3 class="about-text">
           Well hi there, I'm Wren. I've filled this little room with everything I think is cool, from old tech, to new tech, to audio. I stumble my way through repairs, projects and the occasional rant armed with my trusty heirloom apron and two remaining braincells.
         </h3>
+        <SocialLinks class="mt-5"/>
       </div>
     </div>
   </Card>
 </template>
-
-<script setup>
-import {Button} from '@/components/ui/button'
-import {Card} from '@/components/ui/card'
-</script>
 
 <style scoped>
 

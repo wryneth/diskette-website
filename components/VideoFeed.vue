@@ -26,7 +26,7 @@ const fetchVideos = async () => {
     const uploadsPlaylistId = channelData.items[0].contentDetails.relatedPlaylists.uploads;
 
     const videosResponse = await fetch(
-        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=3&playlistId=${uploadsPlaylistId}&key=${config.public.apiKey}`
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=4&playlistId=${uploadsPlaylistId}&key=${config.public.apiKey}`
     );
 
     const videosData = await videosResponse.json();
@@ -128,11 +128,11 @@ const formatDate = (date) => {
         <p>{{ error }}</p>
       </Card>
 
-      <div v-else class=" ms-5 me-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div v-else class=" ms-5 me-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
         <div
             v-for="video in videos"
             :key="video.id"
-            class="video-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:scale-102 transition-shadow duration-300">
 
           <a :href="`https://www.youtube.com/watch?v=${video.id}`" target="_blank" class="block">
             <div class="relative">
@@ -155,14 +155,3 @@ const formatDate = (date) => {
       </div>
     </Card>
 </template>
-
-<style scoped>
-
-.video-card {
-  transition: transform 0.2s, box-shadow 0.3s ease;
-}
-
-.video-card:hover {
-  transform: translateY(-4px);
-}
-</style>

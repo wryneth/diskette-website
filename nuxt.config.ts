@@ -20,7 +20,6 @@ export default defineNuxtConfig({
   },
 
   modules: [
-    '@nuxtjs/color-mode',
     '@nuxt/fonts',
     '@nuxt/icon',
     '@nuxt/image',
@@ -28,14 +27,13 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     'shadcn-nuxt',
     '@tresjs/nuxt',
+    '@nuxtjs/color-mode'
   ],
     shadcn: {
       prefix: '',
       componentDir: './components/ui'
     },
   colorMode: {
-    preference: 'system', // default value of $colorMode.preference
-    fallback: 'light',    // fallback value if not system preference found
-    classSuffix: ''       // This ensures dark mode works with 'dark' class
+    preference: 'system' // or 'dark' or 'system'
   }
 })

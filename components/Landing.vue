@@ -7,7 +7,7 @@
       <img src="/images/WordWide.svg" alt="Diskette Kitchen" style="width:auto;">
     </picture>
     <a class="object-center" href="https://youtube.com/@DisketteKitchen">
-      <ActionButton title="Watch Now" class="watch-btn"/>
+      <ActionButton title="Watch Now" class="flex m-auto mt-10"/>
     </a>
   </div>
 </template>
@@ -213,17 +213,9 @@ canvas {
   width: 100%;
   height: 100%;
 }
-.watch-btn {
-  position: absolute;
-  background-color: rebeccapurple;
-  left: 50%;
-  margin-top: 45px;
-  transform: translate(-50%, -50%);
 
-}
 .logo {
   top: 30%;
-  transform: translate(-50%, -50%);
   position: absolute;
   z-index: 2;
   width: 100%;
