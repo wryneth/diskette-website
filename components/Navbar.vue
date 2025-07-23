@@ -14,7 +14,7 @@
             class="rounded-full px-3 py-1.5 text-m font-medium transition-colors hover:bg-white/10 dark:hover:bg-slate-800/20"
             >{{ item.name }}
         </a>
-        <Separator orientation="vertical" />
+        <Separator orientation="vertical" class="me-4"/>
         <ThemeToggle />
       </div>
 
