@@ -12,7 +12,10 @@ Build with
 You're welcome to modify this for whatever, just do the following:
 
 Clone this repo
-
+```bash
+git clone https://github.com/DisketteKitchen/diskette-website.git
+```
+Install and serve
 ```bash
 cd diskette-website
 pnpm install
