@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiKey: process.env.YOUTUBE,
-      kitKey: process.env.NUXT_KIT,
+      kitKey: process.env.KIT,
     },
   },
   compatibilityDate: '2024-11-01',
