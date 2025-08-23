@@ -4,12 +4,14 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      apiKey: process.env.NUXT_YOUTUBE,
+      apiKey: process.env.YOUTUBE,
+      kitKey: process.env.NUXT_KIT,
     },
   },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+
   ui: {
     colorMode: true
   },
@@ -18,7 +20,10 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-
+  icon: {
+    mode: 'css',
+    cssLayer: 'base'
+  },
   modules: [
     '@nuxt/fonts',
     '@nuxt/icon',
@@ -34,6 +39,6 @@ export default defineNuxtConfig({
       componentDir: './components/ui'
     },
   colorMode: {
-    preference: 'system' // or 'dark' or 'system'
+    preference: 'system'
   }
 })

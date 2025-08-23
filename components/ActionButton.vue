@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <button class="neu-button">{{ title }}</button>
+  <button class="bg-violet-800 dark:bg-black">{{ title }}</button>
 
 </template>
 
@@ -20,7 +20,6 @@ button {
   color: var(--glow-color);
   font-size: 30px;
   font-family: Calistoga, serif;
-  background-color: var(--btn-color);
   border-radius: 60px;
   outline: none;
   box-shadow: 0 0 1em .25em var(--glow-color),
