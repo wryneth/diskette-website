@@ -5,6 +5,11 @@ import Options from "~/components/glow/Options.vue";
 import DIY from '~/components/glow/DIY.vue'
 import Lighting from "~/components/glow/Lighting.vue";
 import Mail from "~/components/glow/Mail.vue";
+
+useSeoMeta({
+  title: 'Diskette://Glow',
+  ogTitle: 'Diskette://Glow',
+})
 </script>
 
 <template>

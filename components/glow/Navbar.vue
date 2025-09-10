@@ -8,7 +8,7 @@
 
 
         <a href="/" class="ms-1 me-5 hover:text-emerald-400">
-          <House class="h-10 w-10 rounded-full p-2 bg-gray-200"/>
+          <House class="h-10 w-10 p-2"/>
         </a>
 
 

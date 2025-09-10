@@ -1,9 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Diskette Kitchen',
-  ogTitle: 'Diskette Kitchen',
-  description: 'Tech involved projects, repairs, and general shenanigans.',
-  ogDescription: 'Tech involved projects, repairs, and general shenanigans.',
+  title: 'Diskette://Kitchen',
+  ogTitle: 'Diskette://Kitchen',
+  description: 'Sharing my passion for technology both old and new, projects, and education.',
+  ogDescription: 'Sharing my passion for technology both old and new, projects, and education.',
 })
 </script>
 
