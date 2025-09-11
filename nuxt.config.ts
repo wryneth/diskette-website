@@ -19,6 +19,10 @@ export default defineNuxtConfig({
       kitKey: process.env.KIT,
     },
   },
+  hotjar: {
+    hotjarId: 6501775,
+    scriptVersion: 6,
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
@@ -43,7 +47,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     'shadcn-nuxt',
     '@tresjs/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    'nuxt-module-hotjar'
   ],
     shadcn: {
       prefix: '',

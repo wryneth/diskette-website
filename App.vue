@@ -5,6 +5,10 @@ useSeoMeta({
   description: 'Sharing my passion for technology both old and new, projects, and education.',
   ogDescription: 'Sharing my passion for technology both old and new, projects, and education.',
 })
+
+const { initialize } = useHotjar()
+
+initialize()
 </script>
 
 <template>
